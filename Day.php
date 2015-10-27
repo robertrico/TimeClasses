@@ -33,8 +33,8 @@ class Period {
         $this->days = array();
 
         foreach($days as $day){
-            $time = $day->sec;
-            $text = date('l',$day->sec);
+            $time = $day['date']->sec;
+            $text = date('l',$day['date']->sec);
             $day = new Day($time,$text);
             array_push($this->days,$day);
         }
